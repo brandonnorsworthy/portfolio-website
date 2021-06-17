@@ -1,0 +1,18 @@
+.navbar div{ /* navbar elements (buttons) */
+    display:inline;
+    background: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: green;
+    height: 5vh;
+}
+
+.hero-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 750px;
+}
