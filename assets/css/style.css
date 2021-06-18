@@ -17,6 +17,15 @@ header div a {
     color: white;
 }
 
+header div a img {
+    padding-top: 8px;
+    width: 30px;
+}
+
+.icons {
+    padding: 0;
+}
+
 footer {
     display: flex;
     align-items: flex-end;
