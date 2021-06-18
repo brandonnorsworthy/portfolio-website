@@ -1,3 +1,12 @@
+/*
+Color pallet for design consistancy
+color: #2DFDA1 bluer
+color: #29E3C6
+color: #3AE2F9 mid accent
+color: #299CE3
+color: #2D77FD greener
+*/
+
 header {
     display: flex;
     justify-content: space-between;
@@ -5,25 +14,37 @@ header {
 }
 
 header div { /* navbar elements (buttons) */
-    padding: 1em;
+    padding: 0.5em;
     display:inline;
     color: white;
-    font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+    font-family: sans-serif;
     text-transform: uppercase;
 }
 
-header div a {
+header h1 { /*min width:1418*/
+    padding-left: 1em;
+    font-size: 1.25em;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header div ul {
+    display: flex;
+    font-size: 1.125em;
+    padding-right: 4em;
+}
+
+header div ul li {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+header div ul li a {
     text-decoration: none;
     color: white;
-}
-
-header div a img {
-    padding-top: 8px;
-    width: 30px;
-}
-
-.icons {
-    padding: 0;
 }
 
 footer {
@@ -59,26 +80,18 @@ to get to the content
     position: relative;
 }
 
-.information {
+.information { /* formatting to get a general idea of body area with information */
     margin: 5em;
     display: flex;
     justify-content: center;
     background: #3AE2F9;
 }
 
-.justify-left {
-    justify-content: flex-start;
+.icons { /* cancel out the navbar padding for links to allow better alignment for icons */
+    padding: 0;
+    justify-content: flex-end;
 }
 
-.justify-center {
-    justify-content: center;
+.icons li a img { /* resize icons to a manageable amount that looks good on the navbar*/
+    width: 30px;
 }
-
-/*
-Color pallet for design consistancy
-color: #2DFDA1 bluer
-color: #29E3C6
-color: #3AE2F9 mid accent
-color: #299CE3
-color: #2D77FD greener
-*/
