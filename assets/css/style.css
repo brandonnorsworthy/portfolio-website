@@ -95,3 +95,9 @@ to get to the content
 .icons li a img { /* resize icons to a manageable amount that looks good on the navbar*/
     width: 30px;
 }
+
+@media screen and (max-width: 1000px) {
+    #navbar-name {
+        display: none;
+    }
+}
