@@ -1,103 +1,48 @@
-/*
-Color pallet for design consistancy
-color: #2DFDA1 bluer
-color: #29E3C6
-color: #3AE2F9 mid accent
-color: #299CE3
-color: #2D77FD greener
-*/
+:root {
+    --dark-accent: #4b4b4b;
+    --light-accent: #89b7e2;
+    --light-accent-secondary: #004166;
+  }
 
 header {
+    background: var(--dark-accent);
     display: flex;
     justify-content: space-between;
-    background: #299CE3;
+    height: 4rem;
 }
 
-header div { /* navbar elements (buttons) */
-    padding: 0.5em;
-    display:inline;
-    color: white;
-    font-family: sans-serif;
-    text-transform: uppercase;
+header h1 {
+    color: var(--dark-accent);
+    background: var(--light-accent);
+    font-size: 2.5rem;
+    height: 3rem;
+    padding: .5vh 1vw 1vh 5vw;
 }
 
-header h1 { /*min width:1418*/
-    padding-left: 1em;
-    font-size: 1.25em;
-}
-
-header div {
+header nav {
+    margin-right: 5vw;
     display: flex;
     align-items: center;
 }
 
-header div ul {
-    display: flex;
-    font-size: 1.125em;
-    padding-right: 4em;
-}
-
-header div ul li {
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
-header div ul li a {
+header nav a {
+    color: var(--light-accent);
+    border-color: var(--light-accent);
     text-decoration: none;
-    color: white;
+    font-size: 1rem;
+    border-bottom-width: 0.15rem;
+    border-bottom-style: solid;
+    padding: 0.4rem;
+    margin: .5rem;
 }
 
-footer {
+main div {
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    background: #299CE3;
+    align-items: stretch;
+    background: red;
+    margin: 0vh 0vw 0vh 0vw;
 }
 
-footer div {
-    padding: 1em;
-    display:inline;
-}
-
-footer div p {
-    color: white;
-    font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-}
-
-.hero-imgs { /* used to format the main images on the site animate 5 panel images as smaller device */
-    display: flex;
-    justify-content: center;
-}
-
-/*
-Make images hide as they go off the screen and only allow a single image if viewport
-width is < 750px & zoom into the picture a bit so they dont have to scroll down much
-to get to the content
-*/
-.hero-imgs div {
-    min-width: 300px;
-    overflow: hidden; /* TODO: not working yet. want images to disappear as they go off the screen*/
-    position: relative;
-}
-
-.information { /* formatting to get a general idea of body area with information */
-    margin: 5em;
-    display: flex;
-    justify-content: center;
-    background: #3AE2F9;
-}
-
-.icons { /* cancel out the navbar padding for links to allow better alignment for icons */
-    padding: 0;
-    justify-content: flex-end;
-}
-
-.icons li a img { /* resize icons to a manageable amount that looks good on the navbar*/
-    width: 30px;
-}
-
-@media screen and (max-width: 1000px) {
-    #navbar-name {
-        display: none;
-    }
+main section {
+    margin: 0vh 5vw 1vh 10vw;
 }
