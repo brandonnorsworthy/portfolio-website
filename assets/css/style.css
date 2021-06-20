@@ -2,6 +2,10 @@
     --dark-accent: #4b4b4b;
     --light-accent: #89b7e2;
     --light-accent-secondary: #004166;
+    --h1tag-size: 2.5rem; /* header, and article topics throughout the page */
+    --right-margin: 5vw; /* page margin to make more uniform */
+    --left-margin: 7vw; /* body content margin to make more uniform */
+    --border-line-width: 0.15rem; /* small accent border lines across page */
   }
 
 header {
@@ -14,35 +18,80 @@ header {
 header h1 {
     color: var(--dark-accent);
     background: var(--light-accent);
-    font-size: 2.5rem;
+    font-size: var(--h1tag-size);
     height: 3rem;
-    padding: .5vh 1vw 1vh 5vw;
+    padding: .5vh 1vw 1vh var(--right-margin);
 }
 
 header nav {
-    margin-right: 5vw;
+    margin-right: var(--right-margin);
     display: flex;
     align-items: center;
 }
 
+main section nav > *,
 header nav a {
     color: var(--light-accent);
-    border-color: var(--light-accent);
     text-decoration: none;
     font-size: 1rem;
-    border-bottom-width: 0.15rem;
-    border-bottom-style: solid;
+    border-bottom: var(--border-line-width) solid var(--light-accent);
     padding: 0.4rem;
     margin: .5rem;
 }
 
-main div {
-    display: flex;
+main > div {
+    display: block;
     align-items: stretch;
-    background: red;
+/*     background: red; */
     margin: 0vh 0vw 0vh 0vw;
 }
 
+main > div img {
+    display: flex;
+    align-items: stretch;
+}
+
+main div h2 {
+    display: flex;
+    justify-content: right;
+    margin: 0px var(--right-margin) 0vh 0vw;
+}
 main section {
-    margin: 0vh 5vw 1vh 10vw;
+    margin: 2vh var(--right-margin) 1vh var(--left-margin);
+    display: flex;
+}
+
+main section h1 { /* TODO: h1 tags are not staying uniform size*/
+    display: flex;
+    justify-content: flex-start;
+    font-size: var(--h1tag-size);
+    text-align: right;
+    text-overflow: clip;
+    width: 150px;
+    padding-right: .75rem;
+    border-right: var(--border-line-width) solid var(--light-accent-secondary);
+    color: var(--light-accent-secondary);
+    /* background: red; */
+}
+
+main section div {
+    padding-left: 1.25rem;
+}
+
+main section nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+main section nav > *{
+    color: var(--dark-accent);
+    border-color: var(--light-accent-secondary);
+}
+
+@media screen and (max-width:948px) {
+    body header h1 span {
+        display: none;
+    }
 }
