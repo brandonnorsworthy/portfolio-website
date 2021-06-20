@@ -42,7 +42,6 @@ header nav a {
 main > div {
     display: block;
     align-items: stretch;
-/*     background: red; */
     margin: 0vh 0vw 0vh 0vw;
 }
 
@@ -62,20 +61,22 @@ main section {
 }
 
 main section h1 { /* TODO: h1 tags are not staying uniform size*/
-    display: flex;
-    justify-content: flex-start;
+    width: 30%;
     font-size: var(--h1tag-size);
     text-align: right;
-    text-overflow: clip;
-    width: 150px;
     padding-right: .75rem;
     border-right: var(--border-line-width) solid var(--light-accent-secondary);
     color: var(--light-accent-secondary);
-    /* background: red; */
+}
+
+main section > nav,
+main section > div {
+    padding-left: 1.25rem;
+    width: 100%;
 }
 
 main section div {
-    padding-left: 1.25rem;
+    color: var(--dark-accent);
 }
 
 main section nav {
@@ -100,5 +101,26 @@ footer {
 @media screen and (max-width:948px) {
     body header h1 span {
         display: none;
+    }
+
+    body section {
+        display:block
+    }
+
+    body section h1 {
+        border: none;
+        border-bottom: var(--border-line-width) solid var(--light-accent-secondary);
+        width: 100%;
+        text-align: left;
+    }
+
+    body section h1 span {
+        display:none
+    }
+
+    body section nav > * {
+        border: none;
+        color: var(--light-accent);
+        background: var(--light-accent-secondary);
     }
 }
