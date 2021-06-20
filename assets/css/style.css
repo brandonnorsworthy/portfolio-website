@@ -90,6 +90,13 @@ main section nav > *{
     border-color: var(--light-accent-secondary);
 }
 
+footer {
+    margin: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 @media screen and (max-width:948px) {
     body header h1 span {
         display: none;
