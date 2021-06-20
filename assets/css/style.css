@@ -5,7 +5,7 @@
     --h1tag-size: 2.5rem; /* header, and article topics throughout the page */
     --right-margin: 5vw; /* page margin to make more uniform */
     --left-margin: 7vw; /* body content margin to make more uniform */
-    --border-line-width: 0.15rem; /* small accent border lines across page */
+    --border-line-width: 0.2rem; /* small accent border lines across page */
   }
 
 header {
@@ -50,7 +50,11 @@ main > div img {
     align-items: stretch;
 }
 
-main div h2 {
+main > div > h2 {
+    font-size: 1.5rem;
+    padding: .25rem;
+    color: var(--dark-accent);
+    background: var(--light-accent);
     display: flex;
     justify-content: right;
     margin: 0px var(--right-margin) 0vh 0vw;
@@ -96,6 +100,29 @@ footer {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+}
+
+.project-card {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project-card img {
+    border: var(--border-line-width) solid var(--light-accent);
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.project-card > div {
+    padding: .5rem;
+    position: absolute;
+    bottom: 2vh;
+    left: 0;
+    background: var(--light-accent);
 }
 
 @media screen and (max-width:948px) {
