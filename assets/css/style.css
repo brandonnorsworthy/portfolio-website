@@ -108,7 +108,6 @@ footer {
     margin: 5vh;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
 }
 
 .project-card {
@@ -117,7 +116,8 @@ footer {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin: 2rem;
+    margin: 0rem 1% 1% 0rem;
+    width: 48%;
 }
 
 .project-card img {
@@ -139,8 +139,13 @@ footer {
     background: var(--light-accent);
 }
 
-#main-project {
+#card-holder {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+#main-project {
+    width: 97%;
 }
 
 @media screen and (max-width:948px) {
@@ -168,5 +173,15 @@ footer {
         border: none;
         color: var(--light-accent);
         background: var(--light-accent-secondary);
+    }
+
+    #main-project,
+    .project-card {
+        width: 100%;
+    }
+
+    #card-holder {
+        display: block;
+        flex-wrap: nowrap;
     }
 }
