@@ -1,6 +1,6 @@
 :root {
-    --dark-accent: #4b4b4b;
-    --light-accent: #89b7e2;
+    --dark-accent: #383838;
+    --light-accent: #89dfe2;
     --light-accent-secondary: #004166;
     --h1tag-size: 2.5rem; /* header, and article topics throughout the page */
     --right-margin: 5vw; /* page margin to make more uniform */
@@ -43,11 +43,14 @@ main > div {
     display: block;
     align-items: stretch;
     margin: 0vh 0vw 0vh 0vw;
+    position: relative;
 }
 
 main > div img {
     display: flex;
     align-items: stretch;
+    width: 100%;
+    height: 150px;
 }
 
 main > div > h2 {
@@ -58,6 +61,11 @@ main > div > h2 {
     display: flex;
     justify-content: right;
     margin: 0px var(--right-margin) 0vh 0vw;
+    padding: .5rem;
+    position: absolute;
+    bottom: 2vh;
+    right: 0;
+    background: var(--light-accent);
 }
 main section {
     margin: 2vh var(--right-margin) 1vh var(--left-margin);
@@ -115,6 +123,10 @@ footer {
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%;
+}
+
+.project-card div h2 {
+    font-size: 1.5rem;
 }
 
 .project-card > div {
