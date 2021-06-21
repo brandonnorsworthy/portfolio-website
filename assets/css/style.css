@@ -118,10 +118,16 @@ footer {
     overflow: hidden;
     margin: 0rem 1% 1% 0rem;
     width: 48%;
+    border: var(--border-line-width) solid var(--light-accent);
+    filter: grayscale(50%);
+}
+
+.project-card:hover {
+    filter: grayscale(0%);
+    cursor: pointer;
 }
 
 .project-card img {
-    border: var(--border-line-width) solid var(--light-accent);
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%;
