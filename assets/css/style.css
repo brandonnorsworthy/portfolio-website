@@ -127,8 +127,9 @@ footer {
 
 .project-card img {
     flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
 }
 
 .project-card div h2 {
@@ -148,9 +149,9 @@ footer {
     flex-wrap: wrap;
 }
 
-#main-project {
+#main-card {
     margin-right: 0px;
-    width: 100%;
+    width: 97%;
 }
 
 @media screen and (max-width:1068px) {
@@ -190,7 +191,7 @@ footer {
         background: var(--light-accent-secondary);
     }
 
-    #main-project,
+    #main-card,
     .project-card {
         width: 100%;
     }
