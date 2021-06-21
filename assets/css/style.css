@@ -23,14 +23,14 @@ header h1 {
     padding: .5vh 1vw 1vh var(--right-margin);
 }
 
-header nav {
+header ul {
     margin-right: var(--right-margin);
     display: flex;
     align-items: center;
 }
 
 main section ul li > *,
-header nav a {
+header ul li a {
     color: var(--light-accent);
     text-decoration: none;
     font-size: 1rem;
@@ -96,7 +96,6 @@ main section ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
 }
 
 main section ul li > * {
@@ -113,9 +112,6 @@ footer {
 
 .project-card {
     display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
     margin: 0rem 1% 1% 0rem;
     width: 48%;
@@ -153,14 +149,11 @@ footer {
 }
 
 #main-project {
-    width: 97%;
+    margin-right: 0px;
+    width: 100%;
 }
 
-@media screen and (max-width:948px) {
-    header nav {
-        display: flex;
-    }
-
+@media screen and (max-width:1068px) {
     body header h1 span {
         display: none;
     }
@@ -181,8 +174,18 @@ footer {
         display:none
     }
 
-    body section li > * {
+    body section ul {
+        display: block;
+    }
+
+    body section ul li {
+        display: flex;
+        justify-content: center;
+    }
+
+    body section ul li > * {
         border: none;
+        width: 60%;
         color: var(--light-accent);
         background: var(--light-accent-secondary);
     }
@@ -193,7 +196,44 @@ footer {
     }
 
     #card-holder {
+        width: 100%;
         display: block;
         flex-wrap: nowrap;
+    }
+}
+
+@media screen and (max-width:867px) {
+    header {
+        display: block;
+        height: 100%;
+    }
+
+    body header h1 span {
+        display: inline;
+    }
+
+    header ul {
+        width: 80%;
+        display: block;
+        justify-content: center;
+        padding-top: .4rem;
+        padding-bottom: .7rem;
+    }
+
+    header ul li a {
+        display: inline-block;
+        width: 50%;
+        padding: .5rem 0rem .3rem 0rem;
+        margin: 0rem 0rem .4rem var(--left-margin);
+    }
+}
+
+@media screen and (max-width:500px) {
+    body section ul li > * {
+        width: 100%;
+    }
+
+    header ul li a {
+        width: 100%;
     }
 }
