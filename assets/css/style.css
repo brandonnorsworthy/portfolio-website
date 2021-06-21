@@ -29,7 +29,7 @@ header nav {
     align-items: center;
 }
 
-main section nav > *,
+main section ul li > *,
 header nav a {
     color: var(--light-accent);
     text-decoration: none;
@@ -82,7 +82,7 @@ main section h1 { /* TODO: h1 tags are not staying uniform size*/
     color: var(--light-accent-secondary);
 }
 
-main section > nav,
+main section > ul,
 main section > div {
     padding-left: 1.25rem;
     width: 100%;
@@ -92,16 +92,17 @@ main section div {
     color: var(--dark-accent);
 }
 
-main section nav {
+main section ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
 }
 
-main section nav > *{
+main section ul li > * {
     color: var(--dark-accent);
     border-color: var(--light-accent-secondary);
+    display: flex;
 }
 
 footer {
@@ -120,6 +121,7 @@ footer {
     width: 48%;
     border: var(--border-line-width) solid var(--light-accent);
     filter: grayscale(50%);
+    transition: all 0.25s ease;
 }
 
 .project-card:hover {
@@ -155,6 +157,10 @@ footer {
 }
 
 @media screen and (max-width:948px) {
+    header nav {
+        display: flex;
+    }
+
     body header h1 span {
         display: none;
     }
@@ -175,7 +181,7 @@ footer {
         display:none
     }
 
-    body section nav > * {
+    body section li > * {
         border: none;
         color: var(--light-accent);
         background: var(--light-accent-secondary);
