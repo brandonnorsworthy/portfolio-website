@@ -73,7 +73,7 @@ main section {
     display: flex;
 }
 
-main section h1 { /* TODO: h1 tags are not staying uniform size*/
+main section h1 {
     width: 30%;
     font-size: var(--h1tag-size);
     text-align: right;
