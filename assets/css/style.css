@@ -8,6 +8,7 @@
     --border-line-width: 0.2rem; /* small accent border lines across page */
   }
 
+/* start of header area formatting */
 header {
     background: var(--dark-accent);
     display: flex;
@@ -15,7 +16,7 @@ header {
     height: 4rem;
 }
 
-header h1 {
+header > h1 {
     color: var(--dark-accent);
     background: var(--light-accent);
     font-size: var(--h1tag-size);
@@ -23,14 +24,14 @@ header h1 {
     padding: .5vh 1vw 1vh var(--right-margin);
 }
 
-header ul {
+header > ul {
     margin-right: var(--right-margin);
     display: flex;
     align-items: center;
 }
 
 main section ul li > *,
-header ul li a {
+header ul li > a {
     color: var(--light-accent);
     text-decoration: none;
     font-size: 1rem;
