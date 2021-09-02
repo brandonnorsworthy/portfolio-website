@@ -16,6 +16,10 @@ First personal portfolio as an assignment responsive layout with ability to add 
 
 ![Mobile Demo Image](./assets/images/readme/website_demo_mobile.png)
 
+## Homework Assignment Given Design
+
+![Given Design](./assets/images/readme/given.gif)
+
 # Acceptance Criteria
 - Presented with name, recent photo, and links to sections (# href), about them, work, and how to contact them
 - Clicking navbar links scrolls down to the corresponding section
